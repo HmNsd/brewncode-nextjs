@@ -3,15 +3,14 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { useSearchParams } from "next/navigation";
 
 export default function ForgotPasswordPage() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
-  const [success, setSuccess] = React.useState(false);
-  const [buttonDisabled, setButtonDisabled] = React.useState(false);
+  const [success, setSuccess] = useState(false);
+  const [buttonDisabled, setButtonDisabled] = useState(false);
 
   // New state for reset password
   const [newPassword, setNewPassword] = useState("");

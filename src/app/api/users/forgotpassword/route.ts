@@ -52,7 +52,7 @@ export async function PATCH(request: NextRequest) {
   try {
     const reqBody = await request.json();
     const { token, newPassword } = reqBody;
-    console.log(`Token: ${token}, New Password: ${newPassword} `);
+    // console.log(`Token: ${token}, New Password: ${newPassword} `);
     
     if (!token || !newPassword) {
       return NextResponse.json({ error: "Invalid request" }, { status: 400 });
@@ -62,7 +62,7 @@ export async function PATCH(request: NextRequest) {
       forgotPasswordToken: token,
       forgotPasswordTokenExpiry: { $gt: Date.now() },
     });
-    console.log("User found:", user);
+    // console.log("User found:", user);
     if (!user) {
       return NextResponse.json(
         { error: "Invalid/User not found" },
