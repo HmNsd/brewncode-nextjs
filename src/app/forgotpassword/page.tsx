@@ -66,7 +66,7 @@ export default function ForgotPasswordPage() {
     try {
       await axios.patch("/api/users/forgotpassword", {
         token,
-        newPassword, // <-- this must match backend
+        newPassword,
       });
       setResetSuccess(true);
       setMessage("Password has been reset successfully. You can now log in.");
