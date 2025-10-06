@@ -31,10 +31,10 @@ export default function LoginPage() {
       console.log("Login Success", response.data);
       router.push("/profile");
 
-      // Simulate Login logic (you can connect to your API here)
-      setTimeout(() => {
-        setSuccess(true);
-      }, 1000);
+      // // Simulate Login logic (you can connect to your API here)
+      // setTimeout(() => {
+      //   setSuccess(true);
+      // }, 1000);
     } catch (error: any) {
       setError("An error occurred during login. Please try again.");
       setSuccess(false);
@@ -118,6 +118,14 @@ export default function LoginPage() {
           Doesn't have an account?{" "}
           <Link href="/signup" className="text-indigo-400 hover:underline">
             Sign up
+          </Link>
+        </p>
+
+        {/* Forget Password */}
+        <p className="mt-6 text-sm text-center text-gray-400">
+          Forgot password?{" "}
+          <Link href="/forgotpassword" className="text-indigo-400 hover:underline">
+            Forgotten Password
           </Link>
         </p>
       </div>

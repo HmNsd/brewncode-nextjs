@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import toast from "react-hot-toast";
-import { log } from "console";
 
 export default function SignupPage() {
   const router = useRouter();
@@ -129,16 +128,17 @@ export default function SignupPage() {
 
           {/* Submit Button */}
           <button
-  type="submit"
-  className={`w-full font-semibold py-2 px-4 rounded-md transition-colors duration-200
-    ${buttonDisabled
-      ? "bg-gray-500 cursor-not-allowed"
-      : "bg-green-600 hover:bg-green-700 text-white"}
+            type="submit"
+            className={`w-full font-semibold py-2 px-4 rounded-md transition-colors duration-200
+    ${
+      buttonDisabled
+        ? "bg-gray-500 cursor-not-allowed"
+        : "bg-green-600 hover:bg-green-700 text-white"
+    }
   `}
-  disabled={buttonDisabled}
->
-  Create Account
-</button>
+          >
+            Create Account
+          </button>
         </form>
 
         {/* Redirect Link */}

@@ -1,8 +1,6 @@
 "use client";
 
 import axios from "axios";
-import { url } from "inspector";
-import { set } from "mongoose";
 import Link from "next/link";
 import React, { useState, useEffect, use } from "react";
 
