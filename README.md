@@ -13,7 +13,7 @@ This project is a Next.js authentication app with the following features:
 
 1. **Clone the repository and install dependencies:**
    ```bash
-   git clone <repo-url>
+   git clone git@github.com:HmNsd/brewncode-nextjs.git
    cd auth-nextjs-app
    npm install
    ```
