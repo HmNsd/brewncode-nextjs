@@ -99,7 +99,7 @@ export default function SignupPage() {
               type="email"
               value={user.email}
               onChange={(e) => setUser({ ...user, email: e.target.value })}
-              className="mt-1 w-full px-4 py-2 dak:bg-gray-700 dak:text-white border border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="mt-1 w-full px-4 py-2 dak:bg-gray-700 dak:text-white  border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
           </div>
 
@@ -116,7 +116,7 @@ export default function SignupPage() {
               type="password"
               value={user.password}
               onChange={(e) => setUser({ ...user, password: e.target.value })}
-              className="mt-1 w-full px-4 py-2 dak:bg-gray-700 dak:text-white border border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="mt-1 w-full px-4 py-2 dak:bg-gray-700 dak:text-white  border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
           </div>
 
