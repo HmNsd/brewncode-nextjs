@@ -62,18 +62,18 @@ export default function SignupPage() {
   }, [user]);
 
   return (
-    <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
-      <div className="w-full max-w-md bg-gray-800 p-8 rounded-lg shadow-lg">
-        <h1 className="text-2xl font-bold text-white text-center mb-6">
+    <div className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900 transition-colors duration-300 px-4">
+      <div className="w-full max-w-md bg-gray-100 dark:bg-gray-800 p-8 rounded-lg shadow-lg">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
           Sign Up
-        </h1>
+        </h2>
 
         <form onSubmit={onSignup} className="space-y-4">
           {/* Username */}
           <div>
             <label
               htmlFor="username"
-              className="block text-sm font-medium text-gray-300"
+              className="block text-sm font-medium dark:text-gray-300"
             >
               Username
             </label>
@@ -82,7 +82,7 @@ export default function SignupPage() {
               type="text"
               value={user.username}
               onChange={(e) => setUser({ ...user, username: e.target.value })}
-              className="mt-1 w-full px-4 py-2 bg-gray-700 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="mt-1 w-full px-4 py-2 dak:bg-gray-700 dak:text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
           </div>
 
@@ -90,7 +90,7 @@ export default function SignupPage() {
           <div>
             <label
               htmlFor="email"
-              className="block text-sm font-medium text-gray-300"
+              className="block text-sm font-medium dark:text-gray-300"
             >
               Email
             </label>
@@ -99,7 +99,7 @@ export default function SignupPage() {
               type="email"
               value={user.email}
               onChange={(e) => setUser({ ...user, email: e.target.value })}
-              className="mt-1 w-full px-4 py-2 bg-gray-700 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="mt-1 w-full px-4 py-2 dak:bg-gray-700 dak:text-white border border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
           </div>
 
@@ -107,7 +107,7 @@ export default function SignupPage() {
           <div>
             <label
               htmlFor="password"
-              className="block text-sm font-medium text-gray-300"
+              className="block text-sm font-medium dark:text-gray-300"
             >
               Password
             </label>
@@ -116,7 +116,7 @@ export default function SignupPage() {
               type="password"
               value={user.password}
               onChange={(e) => setUser({ ...user, password: e.target.value })}
-              className="mt-1 w-full px-4 py-2 bg-gray-700 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="mt-1 w-full px-4 py-2 dak:bg-gray-700 dak:text-white border border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
           </div>
 
@@ -142,7 +142,7 @@ export default function SignupPage() {
         </form>
 
         {/* Redirect Link */}
-        <p className="mt-6 text-sm text-center text-gray-400">
+        <p className="mt-6 text-sm text-center text-gray-500">
           Already have an account?{" "}
           <Link href="/login" className="text-indigo-400 hover:underline">
             Log in

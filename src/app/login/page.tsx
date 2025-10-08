@@ -52,18 +52,18 @@ export default function LoginPage() {
   }, [user]);
 
   return (
-    <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
-      <div className="w-full max-w-md bg-gray-800 p-8 rounded-lg shadow-lg">
-        <h1 className="text-2xl font-bold text-white text-center mb-6">
-          Log In
-        </h1>
+    <div className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900 transition-colors duration-300 px-4">
+      <div className="w-full max-w-md bg-gray-100 dark:bg-gray-800 p-8 rounded-lg shadow-lg">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
+          Login
+        </h2>
 
         <form onSubmit={onLogin} className="space-y-4">
           {/* Email */}
           <div>
             <label
               htmlFor="email"
-              className="block text-sm font-medium text-gray-300"
+              className="block text-sm font-medium dark:text-gray-300"
             >
               Email
             </label>
@@ -72,7 +72,8 @@ export default function LoginPage() {
               type="email"
               value={user.email}
               onChange={(e) => setUser({ ...user, email: e.target.value })}
-              className="mt-1 w-full px-4 py-2 bg-gray-700 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="mt-1 w-full px-4 py-2 dak:bg-gray-700 dak:text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              placeholder="Email"
             />
           </div>
 
@@ -80,7 +81,7 @@ export default function LoginPage() {
           <div>
             <label
               htmlFor="password"
-              className="block text-sm font-medium text-gray-300"
+              className="block text-sm font-medium dark:text-gray-300"
             >
               Password
             </label>
@@ -89,7 +90,8 @@ export default function LoginPage() {
               type="password"
               value={user.password}
               onChange={(e) => setUser({ ...user, password: e.target.value })}
-              className="mt-1 w-full px-4 py-2 bg-gray-700 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="mt-1 w-full px-4 py-2 dak:bg-gray-700 dak:text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              placeholder="Password"
             />
           </div>
 
@@ -101,33 +103,36 @@ export default function LoginPage() {
 
           {/* Submit Button */}
           <button
-  type="submit"
-  className={`w-full font-semibold py-2 px-4 rounded-md transition-colors duration-200
+            type="submit"
+            className={`w-full py-2 rounded-md transition-colors duration-200
     ${buttonDisabled
-      ? "bg-gray-500 cursor-not-allowed"
-      : "bg-blue-400 hover:bg-blue-500 text-white"}
+              ? "bg-gray-500 cursor-not-allowed"
+              : "bg-indigo-600 hover:bg-indigo-700 text-white"}
   `}
-  disabled={buttonDisabled}
->
-  Login
-</button>
+            disabled={buttonDisabled}
+          >
+            Login
+          </button>
         </form>
 
         {/* Redirect Link */}
-        <p className="mt-6 text-sm text-center text-gray-400">
-          Doesn't have an account?{" "}
-          <Link href="/signup" className="text-indigo-400 hover:underline">
-            Sign up
+        <div className="flex flex-col sm:flex-row justify-between items-center mt-4 gap-2">
+          <p className="text-gray-700 dark:text-gray-300">
+            Don't have an account?{" "}
+            <Link
+              href="/signup"
+              className="text-indigo-600 dark:text-indigo-400 hover:underline"
+            >
+              Sign Up
+            </Link>
+          </p>
+          <Link
+            href="/forgotpassword"
+            className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            Forgot password?
           </Link>
-        </p>
-
-        {/* Forget Password */}
-        <p className="mt-6 text-sm text-center text-gray-400">
-          Forgot password?{" "}
-          <Link href="/forgotpassword" className="text-indigo-400 hover:underline">
-            Forgotten Password
-          </Link>
-        </p>
+        </div>
       </div>
     </div>
   );
